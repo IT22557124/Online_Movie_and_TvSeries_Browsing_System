@@ -1,0 +1,123 @@
+/* Reset default browser styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: #fff;
+   
+  }
+  
+  /* Style the login container */
+  #form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image:url("movie_bg2.webp"); /* Replace with your movie-themed background image */
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Style the form-box */
+  .form-box {
+    background-color: rgba(14, 13, 13, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    text-align: center;
+    max-width: 300px;
+  }
+  
+  /* Style the form */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Style the heading */
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the inputbox */
+  .inputbox {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .inputbox i {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  /* Style the forget section */
+  .forget {
+    margin: 10px 0;
+  }
+  
+  label {
+    display: flex;
+    align-items: center;
+    color: #fff;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  /* Style the login button */
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #e50914; /* Movie-themed red color */
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  /* Add hover effect to the login button */
+  input[type="submit"]:hover {
+    background-color: #b5070f; /* Darker red on hover */
+  }
+  
+  /* Style the register section */
+  .register {
+    margin: 10px 0;
+  }
+  
+  p {
+    color: #fff;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #007bff; /* Movie-themed blue color */
+    font-weight: bold;
+  }
+  
+  /* Add some spacing between the login form and links */
+  .register a {
+    margin-left: 10px;
+  }
+  

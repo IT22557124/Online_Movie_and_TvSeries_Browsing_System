@@ -1,0 +1,134 @@
+------------------------------------------------------------------------------------
+CREATE TABLE `webproject`.`user` (
+  `userid` INT NOT NULL AUTO_INCREMENT,
+  `username` VARCHAR(45) NULL,
+  `password` VARCHAR(45) NULL,
+  `email` VARCHAR(45) NULL,
+  `contactNo` VARCHAR(45) NULL,
+  `role` VARCHAR(45) NULL DEFAULT 'user',
+  PRIMARY KEY (`userid`));
+
+
+CREATE TABLE `webproject`.`celebrity` (
+  `celebrityId` INT NOT NULL AUTO_INCREMENT,
+  `celebrityName` VARCHAR(45) NULL,
+  `biography` LONGTEXT NULL,
+  `dob` DATE NULL,
+  `gender` VARCHAR(45) NULL,
+  `country` VARCHAR(45) NULL,
+  `posterImage` VARCHAR(45) NULL,
+  PRIMARY KEY (`celebrityId`));
+
+CREATE TABLE `webproject`.`movies` (
+  `movieid` INT NOT NULL AUTO_INCREMENT,
+  `movieName` VARCHAR(45) NULL,
+  `description` LONGTEXT NULL,
+  `director` VARCHAR(45) NULL,
+  `country` VARCHAR(45) NULL,
+  `releaseYear` DATE NULL,
+  `mainActors` VARCHAR(45) NULL,
+  `budget` VARCHAR(45) NULL,
+  `rating` VARCHAR(45) NULL,
+  `posterImage` VARCHAR(45) NULL,
+  `trailer` VARCHAR(45) NULL,
+  PRIMARY KEY (`movieid`));
+
+
+CREATE TABLE `webproject`.`tvseries` (
+  `tvSeriesId` INT NOT NULL AUTO_INCREMENT,
+  `tvSeriesName` VARCHAR(45) NULL,
+  `description` VARCHAR(45) NULL,
+  `director` VARCHAR(45) NULL,
+  `country` VARCHAR(45) NULL,
+  `releaseYear` VARCHAR(45) NULL,
+  `mainActors` VARCHAR(45) NULL,
+  `budget` VARCHAR(45) NULL,
+  `ratings` VARCHAR(45) NULL,
+  `posterImage` VARCHAR(45) NULL,
+  `trailer` VARCHAR(45) NULL,
+  `seasons` VARCHAR(45) NULL,
+  PRIMARY KEY (`tvSeriesId`));
+
+---------------------------------------------------------------------------------------------
+INSERT INTO user (username,password,email,contactNo) VALUES ('Robertp654','p654','robert654@gmail.com','0715463256');
+INSERT INTO user (username,password,email,contactNo) VALUES ('Katyp369','p369','katy369@gmail.com','070985632');
+INSERT INTO user (username,password,email,contactNo) VALUES ('Ashleyp258','p258','ashley258@gmail.com','0712539856');
+INSERT INTO user (username,password,email,contactNo) VALUES ('Matthewp147','p147','matthew147@gmail.com','0763589745');
+INSERT INTO user (username,password,email,contactNo) VALUES ('Christoperp456','p456','christoper456@gmail.com','0715463256');
+
+
+
+INSERT INTO movies(movieName,description,director,country,releaseYear,mainActors,budget,rating) 
+VALUES ('Everything Everywhere All at Once', 'Everything Everywhere All At Once (EEAAO) is a 2022 
+action-adventure-comedy movie directed and written by Daniel Kwan and Daniel Scheinert. The movie is 
+centered around Evelyn Wang, a Chinese American immigrant in her 50s who is stressed and frustrated by 
+her life. Her life changes drastically when she encounters the multiverse. The movie is two hours of 
+chaos punctuated by absurdist humor and nonstop action sequences, followed by a string of emotional 
+revelations about Evelyn, Joy, Waymond, and the human condition', 'Daniel Kwan, Daniel Scheinert',  
+'American' ,'2022', 'Michelle Yeoh', '$14.3–25 million' , '94%')
+
+INSERT INTO movies(movieName,description,director,country,releaseYear,mainActors,budget,rating) 
+VALUES ('Saving for the Day', 'Saving for the Day 2023 Fantasy action adventure USA Joe Bell is a 
+penny-pinching hermit saving for the day when his real life will begin. One day he is given a 
+chest filled with treasure by a cryptic, old man. After the Old-timer "accidentally" locks the 
+chest, Joe must go on a series of adventures to track down the key', 'John D. Nilles', 
+ 'Australia' ,'2023', 'Andy Shirtliff,James McGhee', '$15–25 million' , '89%')
+
+
+INSERT INTO movies (movieName,description,director,country,releaseYear,mainActors,budget,rating) 
+VALUES('The Covenant',' Guy Ritchie s The Covenant (or simply The Covenant) is a 2023 American 
+action thriller film co-written, produced and directed by Guy Ritchie. The film stars Jake 
+Gyllenhaal and Dar Salim. Its plot follows John Kinley, a U.S. Army Green Beret sergeant, and 
+Ahmed, his Afghan interpreter, fighting the Taliban.','Guy Ritchie',' united states','2023',' 
+Steven Strait, James Herbert', '$10–15 million','76%')
+
+INSERT INTO movies (movieName,description,director,country,releaseYear,mainActors,budget,rating)
+ VALUES('Evil Dead Rise',' Evil Dead Rise is a horror movie that moves the action from the woods 
+to the city. The movie follows two estranged sisters who have to fight against flesh-possessing 
+demons. The sisters have to face the most nightmarish version of family imaginable as they 
+struggle to survive. The movie is expected to be released in 2023.','Lee Cronin','American',
+'2023','Lily Sullivan, Alyssa Sutherland', '$15–19 million','86%')
+
+INSERT INTO movies (movieName,description,director,country,releaseYear,mainActors,budget,rating) 
+VALUES'The long game',' The Long Game is a 2023 American historical drama film adaptation of 
+Humberto G. Garcia is 2010 novel Mustang Miracle. The film is directed by Julio Quintana and 
+stars Jay Hernandez, (Suicide Squad, Magnum P.I.), Jaina Lee Ortez (Girls Trip, Station 19), 
+Dennis Quaid (Midway, A Dog Purpose), and Julian Works (Beautiful Boy, 9-1-1: Lone Star)','Julio 
+Quintana',' American','2020',' Marla Quintana,Paco Farias',' $15–25 million','86%')
+
+
+
+INSERT INTO celebrity(celebrityName, biography, dob, gender, country) VALUES ('Tom Holland', 'Thomas Stanley Holland (born 1 June 1996) is an English actor. His accolades include a British Academy Film Awards, three Saturn Awards, a Guinness World Record & an appearance on the Forbes 30 under 30 Europe list. Some publications have called him one of the most popular actors of his generation. Holland career began at age nine when he enrolled in a dancing class, where a choreographer noticed him & arranged for him to audition for a role in Billy Elliot the Musical at Londons Victoria Palace Theatre After two years of training, he secured a supporting part in 2008 & was upgraded to the title role that year, which he played until 2010. Holland made his film debut in the disaster drama The Impossible (2012) as a teenage tourist trapped in a tsunami, for which he received a London Film Critics Circle Award for Young British Performer of the Year. After this, Holland decided to pursue acting as a full-time career, appearing in How I Live Now (2013) & playing historical figures in the film In the Heart of the Sea (2015) & the miniseries Wolf Hall (2015).', '1996-06-01', 'Male', 'USA');
+
+INSERT INTO celebritytb(celebrityName, biography, dob, gender, country) VALUES ('Emma Watson', 'Emma Charlotte Duerre Watson (born 15 April 1990) is an English actress & activist. Known for her roles in both blockbusters & independent films, as well as for her women rights work, she has received a selection of accolades, including a Young Artist Award & three MTV Movie Awards. Watson has been ranked among the world highest-paid actresses by Forbes & Vanity Fair, & was named one of the 100 most influential people in the world by Time magazine in 2015. Watson attended the Dragon School & trained in acting at the Oxford branch of Stagecoach Theatre Arts. As a child, she rose to stardom after landing her first professional acting role as Hermione Granger in the Harry Potter film series, having previously acted only in school plays. Watson also starred in the 2007 television adaptation of the novel Ballet Shoes & lent her voice to The Tale of Despereaux (2008). After the final Harry Potter film, she took on a supporting role in My Week with Marilyn (2011), before starring as Sam, a flirtatious, free-spirited student in The Perks of Being a Wallflower (2012) to critical success. ', '1990-04-15', 'Female', 'UK');
+
+INSERT INTO celebritytb(celebrityName, biography, dob, gender, country) VALUES ('Chris Evans', 'Christopher Robert Evans (born June 13, 1981) is an American actor. He began his career with roles in television series, such as in Opposite Sex in 2000. Following appearances in several teen films including 2001 Not Another Teen Movie, he gained attention for his portrayal of Marvel Comics character the Human Torch in 2005 Fantastic Four, & its sequel Fantastic Four: Rise of the Silver Surfer (2007). Evans made further appearances in film adaptations of comic books &graphic novels: TMNT (2007), Scott Pilgrim vs. the World (2010), & Snowpiercer (2013). He gained wider recognition for his portrayal of Steve Rogers / Captain America in several Marvel Cinematic Universe films, namely Captain America: The First Avenger (2011), Captain America: The Winter Soldier (2014), & Captain America: Civil War (2016), & the ensemble films The Avengers (2012), Avengers: Age of Ultron (2015), Avengers: Infinity War (2018), & Avengers: Endgame (2019). His work on the Marvel series established him as one of the worlds highest-paid actors.', '1981-06-13', 'Male', 'USA');
+
+INSERT INTO celebritytb(celebrityName, biography, dob, gender, country) VALUES ('Jennifer Lawrence', 'Jennifer Shrader Lawrence (born August 15, 1990) is an American actress. The worlds highest-paid actress in 2015 & 2016, her films have grossed over $6 billion worldwide to date. She appeared in Times 100 most influential people in the world list in 2013 & the Forbes Celebrity 100 list from 2013 to 2016. During her childhood, Lawrence performed in church plays & school musicals. At the age of 14, she was spotted by a talent scout while vacationing in New York City with her family. She moved to Los Angeles & began her acting career in guest roles on television. Her first major role was that of a main cast member on the sitcom The Bill Engvall Show (2007–2009). She made her film debut in a supporting role in the drama Garden Party (2008), & had her breakthrough playing a poverty-stricken teenager in the independent mystery drama Winter Bone (2010). Lawrence career progressed with starring roles as the mutant Mystique in the X-Men film series (2011–2019) & Katniss Everdeen in The Hunger Games film series (2012–2015). The latter made her the highest-grossing action heroine of all time.', '1990-08-15', 'Female', 'USA');
+
+INSERT INTO celebritytb(celebrityName, biography, dob, gender, country) VALUES ('Ryan Reynolds', 'Ryan Rodney Reynolds (born October 23, 1976) is a Canadian-American actor & producer. Throughout his 30-year career in film & television, he has received multiple accolades, including a Critics Choice Movie Award, three Peoples Choice Awards, a Grammy & Golden Globe nomination, & a star on the Hollywood Walk of Fame. Led by his several appearances as Deadpool in Marvel films, he is one of the highest-grossing film actors of all time, with a worldwide box-office gross of over $5 billion worldwide. He began his career starring in the Canadian teen soap opera Hillside (1991–1993), & had minor roles before landing the lead role on the sitcom Two Guys & a Girl between 1998 &2001. Reynolds then starred in a range of films, including comedies such as National Lampoon Van Wilder (2002), Waiting... (2005), 7 The Proposal (2009). He also performed in dramatic roles in Buried (2010), Woman in Gold (2015), & Life (2017), starred in action films such as Blade: Trinity (2004), Green Lantern (2011), 6 Underground (2019) & Free Guy (2021), & provided voice acting in the animated features The Croods film series (2013–2020), Turbo (2013) & Pokémon: Detective Pikachu (2019).', '1976-10-23','Male', 'USA');
+
+
+
+INSERT INTO tvSeries (tvSeriesName, description, country, director, releaseYear, mainActors, budget, ratings, seasons)
+VALUES ('Happy Valley', 'Happy Valley is a British crime drama television series, set and filmed in the Calder Valley, West Yorkshire. Starring Sarah Lancashire and Siobhan Finneran, it was written and created by Sally Wainwright and directed by Wainwright, Euros Lyn and Tim Fywell.', 'USA', 'Peter Capaldi', '2014', 'Rhys Connah, Charlie Murphy', '$40 million', '34%', '4');
+
+
+INSERT INTO tvSeries (tvSeriesName, description, country, director, releaseYear, mainActors, budget, ratings, seasons)
+VALUES ('Harry Potter', 'Harry James Potter is a fictional character and the titular protagonist in J. K. Rowling\'s series of eponymous novels. The majority of the books\' plot covers seven years in the life of the orphan Harry, who, on his eleventh birthday, learns he is a wizard.', 'England', 'Warner Bros', '2001-11-14', 'Daniel Radcliffe, Andy Linden', '$125 million', '3');
+
+
+
+INSERT INTO tvSeries (tvSeriesName, description, country, director, releaseYear, mainActors, budget, ratings, seasons)
+VALUES ('Foundation', 'Foundation is an American science fiction streaming television series created by David S. Goyer and Josh Friedman for Apple TV+, loosely based on the Foundation series of stories by Isaac Asimov.', 'America', 'Jared Harris', '2002-09-23', 'Hari Seldon, Lou Llobell', '$5 million', '67%', '2');
+
+
+INSERT INTO tvSeries (tvSeriesName, description, country, director, releaseYear, mainActors, budget, ratings, seasons)
+VALUES ('Happy Valley', 'Happy Valley is a British crime drama television series, set and filmed in the Calder Valley, West Yorkshire. Starring Sarah Lancashire and Siobhan Finneran, it was written and created by Sally Wainwright and directed by Wainwright, Euros Lyn, and Tim Fywell.', 'USA', 'Peter Capaldi', '2014-04-23', 'Rhys Connah, Charlie Murphy', '$40 million', '34%', '4');
+
+
+INSERT INTO tvSeries (tvSeriesName, description, country, director, releaseYear, mainActors, budget, ratings, seasons)
+VALUES ('Doctor Who', 'Doctor Who is a British science fiction television series broadcast by the BBC since 1963. The series depicts the adventures of a Time Lord called the Doctor, an extraterrestrial being who appears to be human.', 'UK', 'Nicholas Briggs', '2006-03-04', 'Sydney Newman, David Tennant, Matt Smith', '$31 million', '20%', '5');
+
+
+
